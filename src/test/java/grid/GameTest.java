@@ -71,6 +71,7 @@ public class GameTest {
         ByteArrayInputStream in = new ByteArrayInputStream("l q".getBytes());
         game.play(in);
         assertThat(outContent.toString(), not(containsString("Position : -1,0")));
+        assertThat(outContent.toString(), containsString("Position : 0,0"));
     }
 
 }
